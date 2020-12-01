@@ -1,0 +1,5 @@
+package com.springsecurity.security;
+
+public class PasswordConfig {
+
+}

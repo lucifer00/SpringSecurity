@@ -1,0 +1,15 @@
+package com.springsecurity.security;
+
+import java.util.Set;
+
+public enum ApplicationUserRole {
+  STUDENT, ADMIN;
+
+  private Set<ApplicationUserPermission> applicationUserPermissions;
+
+  private ApplicationUserRole
+      (Set<ApplicationUserPermission> applicationUserPermissions) {
+    this.applicationUserPermissions = applicationUserPermissions;
+  }
+
+}
