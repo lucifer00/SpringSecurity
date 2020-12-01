@@ -31,7 +31,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter{
        .antMatchers("/", "index", "/css/*", "/js/*")
        .permitAll()
        .antMatchers("/api/**").hasRole(ApplicationUserRole.STUDENT.name())
-       .antMatchers(HttpMethod.DELETE, "/management/api/**")
+       .antMatchers(HttpMethod.DELETE, "/management/api/**") // order does matter with ant matchers
        .hasAuthority(ApplicationUserPermission.STUDENT_WRITE.getPermission())
        .antMatchers(HttpMethod.PUT, "/management/api/**")
        .hasAuthority(ApplicationUserPermission.STUDENT_WRITE.getPermission())
