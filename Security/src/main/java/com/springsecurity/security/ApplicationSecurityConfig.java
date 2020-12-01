@@ -23,6 +23,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter{
     this.passwordEncoder = passwordEncoder;
   }
 
+  // To configure end-point security
   @Override
   protected void configure(HttpSecurity http) throws Exception {
     http
